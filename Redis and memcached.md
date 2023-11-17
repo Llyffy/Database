@@ -54,6 +54,7 @@
 
 ### Ответ к заданию 2:
 
+![image](https://github.com/Llyffy/Databases/assets/53367937/9b92ac11-1ca2-45c7-9d73-2a445952e4a6)
 
 ---
 
@@ -67,6 +68,10 @@
 
 ### Ответ к заданию 3:
 
+Выделил для себя.
+
+![image](https://github.com/Llyffy/Databases/assets/53367937/e18fb9db-34d2-46bc-b4c1-4ba67b2e20ba)
+
 ---
 
 ### Задание 4. Запись данных в Redis
@@ -78,6 +83,9 @@
 ---
 
 ### Ответ к заданию 4:
+
+Я сначала просканировал и у меня не оказалось ни одного ключа, потом добавил два ключа и два значения
+![image](https://github.com/Llyffy/Databases/assets/53367937/edce417c-f38d-4ed1-b9ee-60c7deb5a67e)
 
 ---
 
@@ -92,4 +100,6 @@
 --- 
 
 ### Ответ к заданию 5:
+
+![image](https://github.com/Llyffy/Databases/assets/53367937/678b54ff-03e8-4cfc-ba8e-db027623fef4)
 
