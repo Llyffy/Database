@@ -74,8 +74,17 @@
 
 ### Ответ к заданию 3:
 
+В общем я не знаю почему, но мои акес лог не показываются в Observability > Stream:
 
+![image](https://github.com/Llyffy/Databases/assets/53367937/6382ba59-639d-44bb-81fd-6b16587aec46)
 
+Но я могу их увидеть через дев тулс:
+
+![image](https://github.com/Llyffy/Databases/assets/53367937/707a04ac-8545-4fa0-b0eb-c60200110c71)
+
+Не понимаю почему так.
+
+В логах Elasticsearch, kibana, logstash нет ничего об ошибках.
 ---
 
 ### Задание 4. Filebeat. 
