@@ -87,27 +87,31 @@
 ```
 input {
   file {
-    path => "/var/log/nginx/access.log"
+    path => "var/log/nginx.access.log"
     start_position => "beginning"
   }
 }
-
 filter {
-  grok {
-    match => { "message" => "%{IPORHOST:remote_ip} - %{DATA:user_name} \[%{HTTPDATE:access_time}\] \"%{WORD:http_method} %{DATA:url} HTTP/%{NUMBER:http_version}\" %{NUMBER:response_code} %{NUMBER:body_sent_>
-  }
+    grok {
+        match => { "message" => "%{IPORHOST:remote_ip} - %{DATA:user_name}
+\[%{HTTPDATE:access_time}\] \"%{WORD:http_method} %{DATA:url}
+HTTP/%{NUMBER:http_version}\" %{NUMBER:response_code} %{NUMBER:body_sent_bytes}
+\"%{DATA:referrer}\" \"%{DATA:agent}\"" }
+    }
+    mutate {
+        remove_field => [ "host" ]
+    }
+}
+output {
+    elasticsearch {
+        hosts => "192.168.0.102"
+        data_stream => "true"
+    }
 }
 
-output {
-  elasticsearch {
-    hosts => ["192.168.0.102:9200"]
-    index => "nginx-access-%{+YYYY.MM.dd}"
-    data_stream => "true"
-  }
-}
 ```
 
-В логах Elasticsearch, kibana, logstash нет ничего об ошибках.
+В логах Elasticsearch, kibana, logstash все еще нет никаких ошибок, ощущение будто бы мой конф файл просто игнорируется.
 
 ---
 
@@ -120,6 +124,10 @@ output {
 ---
 
 ### Ответ к заданию 4:
+
+![image](https://github.com/Llyffy/Databases/assets/53367937/1df8c865-4001-480a-95ab-736705dfa1f6)
+
+В то время файлбит отрабатывает себя прекрасно.
 
 ---
 
