@@ -108,6 +108,7 @@ output {
 ```
 
 В логах Elasticsearch, kibana, logstash нет ничего об ошибках.
+
 ---
 
 ### Задание 4. Filebeat. 
