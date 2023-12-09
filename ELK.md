@@ -82,35 +82,6 @@
 
 ![image](https://github.com/Llyffy/Databases/assets/53367937/707a04ac-8545-4fa0-b0eb-c60200110c71)
 
-Не понимаю почему так. Сам ассесс лог находится в /etc/logstash/conf.d/nginx.conf и выглядит вот так:
-
-```
-input {
-  file {
-    path => "var/log/nginx.access.log"
-    start_position => "beginning"
-  }
-}
-filter {
-    grok {
-        match => { "message" => "%{IPORHOST:remote_ip} - %{DATA:user_name}
-\[%{HTTPDATE:access_time}\] \"%{WORD:http_method} %{DATA:url}
-HTTP/%{NUMBER:http_version}\" %{NUMBER:response_code} %{NUMBER:body_sent_bytes}
-\"%{DATA:referrer}\" \"%{DATA:agent}\"" }
-    }
-    mutate {
-        remove_field => [ "host" ]
-    }
-}
-output {
-    elasticsearch {
-        hosts => "192.168.0.102"
-        data_stream => "true"
-    }
-}
-
-```
-
 В логах Elasticsearch, kibana, logstash все еще нет никаких ошибок, ощущение будто бы мой конф файл просто игнорируется.
 
 Еще я решил ввести запрос к еластику и увидел что мои именно nginx логи имеют желтый статус, в то время как у остальных зеленый, может быть в этом проблема? 
