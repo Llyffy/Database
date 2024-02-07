@@ -60,7 +60,8 @@
 
 Как я понимаю, он ругается на то, что я его никак не защитил и эти данные может получить кто угодно.
 
-![image](https://github.com/Llyffy/Databases/assets/53367937/95bb517e-812f-4285-917a-af07593db585)
+![image](https://github.com/Llyffy/Databases/assets/53367937/8db959da-8124-4d55-8bd6-8bf60ba57e00)
+
 
 ---
 
@@ -74,20 +75,9 @@
 
 ### Ответ к заданию 3:
 
-В общем я не знаю почему, но мои акес лог не показываются в Observability > Stream:
+![image](https://github.com/Llyffy/Databases/assets/53367937/f1c647e6-4c7a-4e0a-a3c0-1a94657df7fc)
 
-![image](https://github.com/Llyffy/Databases/assets/53367937/6382ba59-639d-44bb-81fd-6b16587aec46)
-
-Но я могу их увидеть через дев тулс:
-
-![image](https://github.com/Llyffy/Databases/assets/53367937/707a04ac-8545-4fa0-b0eb-c60200110c71)
-
-В логах Elasticsearch, kibana, logstash все еще нет никаких ошибок, ощущение будто бы мой конф файл просто игнорируется.
-
-Еще я решил ввести запрос к еластику и увидел что мои именно nginx логи имеют желтый статус, в то время как у остальных зеленый, может быть в этом проблема? 
-
-![image](https://github.com/Llyffy/Databases/assets/53367937/09201078-7322-4cf3-ab55-079411d3ad23)
-
+Все, получилось, я разобрался, сделал визуализацию по времени как часто кто то заходил на мой nginx 
 
 ---
 
