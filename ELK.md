@@ -60,8 +60,7 @@
 
 Как я понимаю, он ругается на то, что я его никак не защитил и эти данные может получить кто угодно.
 
-![image](https://github.com/Llyffy/Databases/assets/53367937/8db959da-8124-4d55-8bd6-8bf60ba57e00)
-
+![image](https://github.com/Llyffy/Databases/assets/53367937/95bb517e-812f-4285-917a-af07593db585)
 
 ---
 
@@ -75,7 +74,7 @@
 
 ### Ответ к заданию 3:
 
-![image](https://github.com/Llyffy/Databases/assets/53367937/f1c647e6-4c7a-4e0a-a3c0-1a94657df7fc)
+![image](https://github.com/Llyffy/Databases/assets/53367937/8db959da-8124-4d55-8bd6-8bf60ba57e00)
 
 Все, получилось, я разобрался, сделал визуализацию по времени как часто кто то заходил на мой nginx 
 
